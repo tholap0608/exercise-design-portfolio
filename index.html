@@ -300,12 +300,12 @@
       <h2>Training &amp; certifications</h2>
       <ul>
         <li>FEMA IS-120.c — An Introduction to Exercises</li>
-        <li>FEMA IS-100  &amp; NIMS fundamentals</li>
+        <li>FEMA IS-100  — An Introduction to Incident Command System</li>
       </ul>
     </section>
 
     <footer class="site">
-      <p>Contact — tnlapinig0608@gmail.com · www.linkedin.com/in/thomas-lapinig/ · Bergen County, NJ</p>
+      <p>Contact — <a href="mailto:tnlapinig0608@gmail.com">Email me</a> · <a href="www.linkedin.com/in/thomas-lapinig/" target="blank" rel="noopener noreferrer">LinkedIn</a> · Bergen County, NJ</p>
     </footer>
   </div>
 
@@ -360,17 +360,16 @@ const cases = [
     tag: "wargame",
     tagLabel: "Wargame",
     title: "Operation Silver Shore",
-    hook: "A matrix wargame layered with a Bayesian uncertainty model to quantify escalation risk under deliberately ambiguous conditions.",
+    hook: "A wargame navigating ambiguous decision environments applying a Hidden Markov Model to combat decision paralysis brought on by maritime Gray Zone tactics.",
     role: "Lead designer",
     status: "Design complete",
-    problem: "Gray zone tactics are defined by deniability and ambiguity — no single decisive fact ever resolves who is really behind an incident. A discussion-based tabletop alone couldn't capture that; the exercise needed a genuine adversary making independent moves, plus a way to represent shifting confidence rather than a binary right/wrong read.",
+    problem: "Paralytic warfare's main goal is to incapacitate an opponent's war-making system via complete or partial loss of functionality. Chinese maritime Gray Zone tactics reliy on a combination of physical and psychological means to debilitate critical physical movement and/or sensory systems. They force decision makers into a state of reluctance to make a timely decision due to fear of negative consequences or aversion/inability to draw conclusions amidst ambiguity.",
     decisions: [
-      { title: "Escalation ladder as shared vocabulary", body: "Built a 6-rung escalation scale first, before writing a single inject — every action either side can take maps to a rung, which is what let the uncertainty model actually compute against something." },
-      { title: "Bayesian layer over Monte Carlo", body: "Chose sequential belief-updating over a heavier simulation because it mirrors how real intelligence assessments actually work — evidence nudges confidence, it doesn't resolve it outright." },
-      { title: "Red given internal tension too", body: "Split Red into a state handler and a field commander who disagree on acceptable risk, so gray zone ambiguity exists on both sides of the table, not just for Blue." }
+      { title: "Hidden Markov Model Application", body: "HMMs are statistical models used to predict or deduce a sequence of hidden events based on a sequence of observable outputs. Regarding Gray Zone warfare, this uncertainty quantification technique is best at assessing hidden adversarial intent." },
+      { title: "Escalation ladder via Injects", body: "Injects were created to create an adaptive adversary that was able to respond to player actions and mimic a Gray Zone artist. They were created in the medium of faux intelligence reports and cables that supported the fidelity of the uncertain environment for the blue team (decision makers)" }
     ],
     artifacts: [
-      { name: "Build plan and design roadmap", type: "Markdown, 6 sections" },
+      { name: "Scenario Briefing Slides", type: 'Slides presented to club during StarEx: <a href="https://docs.google.com/presentation/d/16cjCN2TR98pshl7_Np4rlVM_2_b0ossUbJlFi-Z8tI4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Here</a>' },
       { name: "Escalation ladder and action catalogue", type: "Reference table" },
       { name: "UQ methodology note", type: "Bayesian updater + Markov transition model" }
     ],
