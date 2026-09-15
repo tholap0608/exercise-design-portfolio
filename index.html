@@ -473,13 +473,18 @@ function openDetail(id) {
     decisionsEl.appendChild(box);
   });
 
-  const artifactsEl = document.getElementById('d-artifacts');
-  artifactsEl.innerHTML = '';
+  // ✅ NEW (Safe execution if artifacts is missing or empty):
+const artifactsEl = document.getElementById('d-artifacts');
+artifactsEl.innerHTML = '';
+if (c.artifacts && c.artifacts.length > 0) {
   c.artifacts.forEach(a => {
     const li = document.createElement('li');
     li.innerHTML = `${a.name}<span class="type">${a.type}</span>`;
     artifactsEl.appendChild(li);
   });
+} else {
+  artifactsEl.innerHTML = '<li><span class="type">No artifacts attached</span></li>';
+});
 
   document.getElementById('gallery-view').classList.add('hidden');
   document.getElementById('detail-view').classList.add('active');
