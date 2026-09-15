@@ -412,7 +412,9 @@ const cases = [
       { title: "Engineering Incentives", body: "Inject support created real dilemmas like sharing information versus withholding information. The injects preyed on cultural biases, psychological red lines, and geopolitical pressures." },
       { title: "Establish Information Asymmetry", body: "Countries were disseminated varying levels of information throughout the rounds, reflecting real-life information apparatuses. " }
     ],
-    artifacts: [],
+    artifacts: [
+      {name: "Resume", type: 'Documents of exercise are CUI; reference my resume for a description of my responsibilities on the project: <a href="https://docs.google.com/document/d/1gkObakipax2CTaVzuHqOzQV0bWbdxguI/edit?usp=sharing&ouid=102071319163848989213&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Here</a>' 
+    ],
     reflection: "First industry-level tabletop exercise: great introduction to the experience."
   }
 ];
@@ -476,14 +478,10 @@ function openDetail(id) {
   // ✅ NEW (Safe execution if artifacts is missing or empty):
 const artifactsEl = document.getElementById('d-artifacts');
 artifactsEl.innerHTML = '';
-if (c.artifacts && c.artifacts.length > 0) {
-  c.artifacts.forEach(a => {
-    const li = document.createElement('li');
-    li.innerHTML = `${a.name}<span class="type">${a.type}</span>`;
-    artifactsEl.appendChild(li);
-  });
-} else {
-  artifactsEl.innerHTML = '<li><span class="type">No artifacts attached</span></li>';
+c.artifacts.forEach(a => {
+  const li = document.createElement('li');
+  li.innerHTML = `${a.name}<span class="type">${a.type}</span>`;
+  artifactsEl.appendChild(li);
 });
 
   document.getElementById('gallery-view').classList.add('hidden');
