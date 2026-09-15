@@ -99,7 +99,7 @@
   .card[data-tag="game"] { border-top-color: var(--brick); }
   .card:hover { border-top-color: var(--off-white); }
   .card .case-no {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--ink-soft);
     margin: 0 0 10px;
   }
@@ -111,7 +111,7 @@
     color: var(--ink);
   }
   .card p.hook {
-    font-size: 14.5px;
+    font-size: 15px;
     color: var(--ink-soft);
     margin: 0 0 16px;
   }
@@ -119,7 +119,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--ink-soft);
     border-top: 1px solid #D9D2C0;
     padding-top: 12px;
@@ -158,7 +158,7 @@
   section.about p {
     max-width: 640px;
     color: var(--off-white-soft);
-    font-size: 15.5px;
+    font-size: 16px;
   }
   .certs ul {
     list-style: none;
@@ -222,7 +222,7 @@
     margin-bottom: 36px;
   }
   .meta-row .meta-item .label {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--off-white-soft);
     margin: 0 0 3px;
   }
@@ -305,7 +305,7 @@
     </section>
 
     <footer class="site">
-      <p>Contact — <a href="mailto:tnlapinig0608@gmail.com">Email me</a> · <a href="www.linkedin.com/in/thomas-lapinig/" target="blank" rel="noopener noreferrer">LinkedIn</a> · Bergen County, NJ</p>
+      <p>Contact — <a href="mailto:tnlapinig0608@gmail.com">Email me</a> · <a href="https://www.linkedin.com/in/thomas-lapinig/" target="blank" rel="noopener noreferrer">LinkedIn</a> · Bergen County, NJ</p>
     </footer>
   </div>
 
@@ -359,63 +359,60 @@ const cases = [
     id: 1,
     tag: "wargame",
     tagLabel: "Wargame",
-    title: "Operation Silver Shore",
-    hook: "A wargame navigating ambiguous decision environments applying a Hidden Markov Model to combat decision paralysis brought on by maritime Gray Zone tactics.",
+    title: "Operation Silver Shore: Maritime Gray Zone Uncertainty",
+    hook: "A wargame navigating ambiguous decision environments, applying a Hidden Markov Model to combat decision paralysis brought on by maritime Gray Zone tactics.",
     role: "Lead designer",
     status: "Design complete",
-    problem: "Paralytic warfare's main goal is to incapacitate an opponent's war-making system via complete or partial loss of functionality. Chinese maritime Gray Zone tactics reliy on a combination of physical and psychological means to debilitate critical physical movement and/or sensory systems. They force decision makers into a state of reluctance to make a timely decision due to fear of negative consequences or aversion/inability to draw conclusions amidst ambiguity.",
+    problem: "Paralytic warfare's main goal is to incapacitate an opponent's war-making system via complete or partial loss of functionality. Chinese maritime Gray Zone tactics rely on a combination of physical and psychological means to debilitate critical physical movement and/or sensory systems. They force decision makers into a state of reluctance to make a timely decision due to fear of negative consequences or aversion/inability to draw conclusions amidst ambiguity.",
     decisions: [
       { title: "Hidden Markov Model Application", body: "HMMs are statistical models used to predict or deduce a sequence of hidden events based on a sequence of observable outputs. Regarding Gray Zone warfare, this uncertainty quantification technique is best at assessing hidden adversarial intent." },
       { title: "Escalation ladder via Injects", body: "Injects were created to create an adaptive adversary that was able to respond to player actions and mimic a Gray Zone artist. They were created in the medium of faux intelligence reports and cables that supported the fidelity of the uncertain environment for the blue team (decision makers)" }
     ],
     artifacts: [
       { name: "Scenario Briefing Slides", type: 'Slides presented to club during StarEx: <a href="https://docs.google.com/presentation/d/16cjCN2TR98pshl7_Np4rlVM_2_b0ossUbJlFi-Z8tI4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Here</a>' },
-      { name: "Escalation ladder and action catalogue", type: "Reference table" },
-      { name: "UQ methodology note", type: "Bayesian updater + Markov transition model" }
+      { name: "Injects", type: 'Disseminated throughout different turns of the exercise: <a href="https://docs.google.com/document/d/1A6qxL4BvQG5vuok_JCEHsCz8U5n-cZZfvKL4epz18-Q/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Here</a>' },
+      { name: "My Report on Maritime Gray Zone Activity", type: 'Developed an extensive risk assessment framework with recommendations on Chinese maritime Gray Zone activity: <a href="https://docs.google.com/document/d/1fc5Xy2-epfnZcd7CyEgSVhyCclIWviuM3qbJ9PkYluk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read Here</a>' }
     ],
-    reflection: "Not yet playtested. Next step is a Tier 1 spreadsheet prototype of the Bayesian layer before running it live."
+    reflection: "Playtested once; future playthroughs can allow for application of various other uncertainty quantification techniques"
   },
   {
     id: 2,
-    tag: "ttx",
-    tagLabel: "Tabletop exercise",
-    title: "Chemical incident response TTX",
-    hook: "A HSEEP-aligned consequence-management tabletop built around interagency coordination in the first hours of a chemical incident.",
+    tag: "wargame",
+    tagLabel: "Wargame",
+    title: "Viridian Sakura: Chemical Terror Crisis Response",
+    hook: "Emergency responders were overwhelmed and underprepared to handle Aum Shinrikyo's March 20, 1995 sarin attack. This wargame revisits that event, focusing on crisis response when the blue team starts behind",
     role: "Lead designer",
     status: "Design complete",
-    problem: "The training objective was pure response coordination — decision authority, resource bottlenecks, and public messaging — not attack characteristics. The scenario needed to generate real friction between agencies without requiring any technical detail about the agent or its dispersal.",
+    problem: "Emergency responders' efforts were hampered by the influx of victims, shortages of ambulances and antidotes, and gaps in coordination and communication. These fragilities demonstrate the exigency for crisis response infrastructure, underlining interagency coordination, and attack training and preparation.",
     decisions: [
-      { title: "Deliberately excluded attack specifics", body: "Agent identity and dispersal method were left generic on purpose — those details add no training value for a coordination-focused exercise and don't belong in a TTX script." },
-      { title: "Five staged injects across a real timeline", body: "Structured from T+0 to T+6 hours so the exercise forces decisions to compound rather than resolving cleanly at each stage." },
-      { title: "Built-in jurisdictional friction", body: "Deliberately scripted conflict between forensic evidence preservation and public health area-clearing needs, since that tension is one of the most realistic and under-rehearsed failure points in real incidents." }
+      { title: "Two Phase Game Flow", body: "Blue team spent the first phase doing generic planning and preparation for a potential attack. The next phase, however, activated the emergency and forced them to face cascading risks and evolving obstacles. " },
+      { title: "Reframing Focus of Exercise", body: `This exercise's narrative involved a terrorist attack, but the theme for the blue team was reframed to "contain the emergency" rather than "stop the terrorists"`},
+      { title: "Pre-Built Effectiveness Ratings and Likelihood Estimates", body: "Location of attack, method of attack, and exposure route were all categorized into three levels of effectiveness. These qualitative assessments fueled a success likelihood and exposure estimate table that was used for adjudication at the EndEx." }
     ],
     artifacts: [
-      { name: "Full TTX design document", type: "Markdown" },
-      { name: "Inject timeline (T+0 to T+6hr)", type: "5 staged injects" },
-      { name: "Discussion questions per inject", type: "Facilitator guide" }
+      { name: "Facilitator Guide Sheet", type: 'How to run the scenario: <a href="https://docs.google.com/document/d/1a8MJ9GLTge37SaPEm_g5dI7mM7YhmWbT/edit?usp=sharing&ouid=102071319163848989213&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Here</a> ' },
+      { name: "Red Team Sheet", type: 'Team intel doc: href="https://docs.google.com/document/d/1lLBWd48F013Oq85UDcwzlmkI4lcto8R-/edit?usp=sharing&ouid=102071319163848989213&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Here</a>' },
+      { name: "Blue Team Sheet", type: 'Team intel doc: href="https://docs.google.com/document/d/1vokY_LHGtGlAJIC2ZPCj3a8r6LC89sAD/edit?usp=sharing&ouid=102071319163848989213&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Here</a>' }, 
+      { name: "Maps", type: 'Fabricated reality maps: href="https://docs.google.com/document/d/1nD2tusTBg-Va5QwD-3THdAmEWAT5BW0b/edit?usp=sharing&ouid=102071319163848989213&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Here</a>' },
+      { name: "Research Report that Influenced Scenario", type: 'Personal case study analysis on the Tokyo Sarin Attacks: href="https://docs.google.com/document/d/1MgE0S7cuDtIGLRNTyscX-fE1Rh463gSC8pl_MTYoa7o/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Here</a>' }
     ],
-    reflection: "Designed to HSEEP's discussion-based exercise structure. Would benefit from a full MSEL retrofit and a mock AAR/IP as a next iteration."
+    reflection: "Played twice, with new experience with HSEEP doctrine, future revisions involve tweaking the scenario to provide more targeted HSEEP-related lessons"
   },
   {
     id: 3,
-    tag: "game",
-    tagLabel: "Game",
-    title: "Social engineering &amp; insider threat game",
-    hook: "A competitive card-driven game where every ability requires constructing a real pretext, built to teach recognizable influence techniques rather than abstract game mechanics.",
-    role: "Lead designer",
-    status: "Playtest-ready",
-    problem: "Early drafts leaned on hidden-role mechanics borrowed from party games — silence tokens, oracle reveals — which taught nothing about actual social engineering. The redesign challenge was making every ability require a player to perform a real technique, tagged to a recognized influence principle.",
+    tag: "ttx",
+    tagLabel: "Tabletop Exercise",
+    title: "RISC Research Supporting USANCA: Obsidian Lotus",
+    hook: "A tabletop exercise targeting how ambiguity, siloed information sharing, and different information apparatuses affect public health crisis management.",
+    role: "Designer",
+    status: "Design Complete",
+    problem: "The COVID-19 Pandemic revealed gaps and flaws in public health crisis management capabilities. Within the global apparatus, a defining component is the flow of information: this exercise modeled information-sharing gaps during public health events.",
     decisions: [
-      { title: "Cut all auto-executing abilities", body: "Removed silence/block/reveal mechanics that had no fictional justification, since they rewarded spending a token rather than constructing a lie." },
-      { title: "Tagged every ability to an influence principle", body: "Authority, urgency, reciprocity, social proof, and rapport each got at least one corresponding ability, closing a gap where several real-world techniques weren't represented at all." },
-      { title: "Added a technique-identification scoring round", body: "Teams now score bonus points for correctly naming which influence principle was used against them, tying the debrief directly into the scored game rather than treating it as an afterthought." }
+      { title: "Modeling the Information Space", body: "Researched public health infrastructure in foreign countries and modeled their behavior through injects that responded to actions and decisions within the exercise." },
+      { title: "Engineering Incentives", body: "Inject support created real dilemmas like sharing information versus withholding information. The injects preyed on cultural biases, psychological red lines, and geopolitical pressures." },
+      { title: "Establish Information Asymmetry", body: "Countries were disseminated varying levels of information throughout the rounds, reflecting real-life information apparatuses. " }
     ],
-    artifacts: [
-      { name: "Full card deck (Blue and Red)", type: "24 roles with tightened ability wording" },
-      { name: "Facilitator packet", type: "Ground-truth fact sheet, scoring rubric" },
-      { name: "Design rationale notes", type: "Influence-principle mapping" }
-    ],
-    reflection: "Ready for a first playtest. Watching for balance between the Silver Tongue and Verify mechanics, which need to stay clearly asymmetric without either side ever learning the other's internal rules."
+    reflection: "First industry-level tabletop exercise: great introduction to the experience."
   }
 ];
 
